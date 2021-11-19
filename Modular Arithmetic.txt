@@ -1,0 +1,10 @@
+Properties:
+(A%M) < M  --> where A>M
+(A%M) = 0  --> where A=M ==> [A%A=0]
+(A%M) = A  --> where A<M
+
+Modular Arithmetic Property:
+(a+b)%M = ((a%M) + (b%M))%M
+(a*b)%M = ((a%M) * (b%M))%M
+(a-b)%M = ((a%M) - (b%M) + M)%M
+(a/b)%M = ((a%M) * (b^-1)%M)%M

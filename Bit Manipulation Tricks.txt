@@ -1,0 +1,46 @@
+<-----------Check no. is ODD or Even using bit Manipulation------------>
+In Binary representation of Decimal no. , last bit is 0 for even no.s and last bit is 1 for odd no.s
+let given no is num:
+then (num&1) == 1  ---> if num is odd
+(num&1) == 0 ---> if num is even.
+
+
+<----------Multiply by 2 and Divide by 2------------->
+divide num by 2 : (num>>1)
+multiply num by 2 : (num<<1)
+
+
+<-------Upper Case and Lower Case Conversion---------->
+The difference between upper character and lower character is that 5th bit in lower is set while in upper is unset.
+So changing set to unset or vice-versa can make bits different.
+exp1:  char upper='A';  -->given char in upperCase
+	     char lower=A | (1<<5);  ---> converted char into lowerCase
+exp2: char lower='a';   --->given char in lowerCase
+      char upper=lower & (~(1<<5));   --->converted char into upperCase
+
+
+Cool Trick:  Upper to lower: char(upperChar | '')
+	     lower to Upper: char(lowerChar & '_')
+
+
+<--------Clear LSB and MSB----------->
+clear LSB upto ith bit=> (a&(~(1<<(i+1))-1)));
+clear MSB upto ith bit=> (a&((1<<(i+1))-1));
+
+
+<----------Check If a No. is 2 power or Not-------->
+let the number is n:
+(n & (n-1))!=0 -----> Yes, it is 2 power
+(n & (n-1))==0 -----> No. it is not 2 power
+
+<------Swap 2 No.s using XOR--------->
+a=a^b;
+b=b^a;
+a=a^b;
+Now a and b values are swapped.
+
+
+
+
+
+
